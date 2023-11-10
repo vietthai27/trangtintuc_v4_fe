@@ -24,7 +24,6 @@ function TaoBaiBao() {
     const onNoiDungBaiBaoChange = (value) => {
         dispatch(changeNoiDungBaibaoAction(value));
     }
-    //change
 
     return (
         <div className='container'>

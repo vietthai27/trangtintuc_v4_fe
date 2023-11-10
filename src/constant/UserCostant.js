@@ -1,0 +1,8 @@
+export const ThayDoiDuLieuTenNguoiDung = "Thay doi du lieu ten nguoi dung"
+export const ThayDoiDuLieuMatKhauNguoiDung = "Thay doi du lieu nguoi dung"
+export const ThayDoiDuLieuNhapLaiMatKhau = "Thay doi du lieu nhap lai mat khau"
+export const ThayDoiDuLieuEmail = "Thay doi du lieu email"
+export const DangNhapThanhCong = "Dang nhap thanh cong"
+export const DangNhapThatBai = "Dang nhap that bai"
+export const DangKyThanhCong = "Dang ky thanh cong"
+export const DangKyThatBai = "Dang ky that bai"

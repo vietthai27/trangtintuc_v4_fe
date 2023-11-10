@@ -1,4 +1,4 @@
-import { ThayDoiDuLieuBaibao, ThayDoiNoiDungBaiBaoTrongTaoBaiBao } from "../constant/BaiBaoConstant"
+import { ThayDoiNoiDungBaiBaoTrongTaoBaiBao } from "../constant/BaiBaoConstant"
 
 const initialState = {
     dataBaibao: '',
@@ -12,9 +12,6 @@ const initialState = {
 
 const baiBaoReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ThayDoiDuLieuBaibao:
-            state.dataBaibao = action.data
-            break
         case ThayDoiNoiDungBaiBaoTrongTaoBaiBao:
             state.addBaiBao.noiDung = action.data;
             break
