@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
 import JoditEditor from 'jodit-react';
 import {  useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { changeDataBaibaoAction } from '../action/BaiBaoAction';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeDataBaibaoAction, changeNoiDungBaibaoAction } from '../action/BaiBaoAction';
+import "../assets/css/TaoBaiBao.css";
+import { TextField } from '@mui/material';
 
 function TaoBaiBao() {
 
@@ -11,21 +13,30 @@ function TaoBaiBao() {
     const navigate = useNavigate()
 
     const editor = useRef(null);
-    const [content, setContent] = useState('');
+
+    const { addBaiBao } = useSelector((reduxData) => reduxData.baiBaoReducer)
 
     const denTrangBaiBao = () => {
-        dispatch(changeDataBaibaoAction(content))
+        const newString = addBaiBao.noiDung.replace(/"/g, '\\"');
         navigate("/baibao")
     }
 
+    const onNoiDungBaiBaoChange = (value) => {
+        dispatch(changeNoiDungBaibaoAction(value));
+    }
+
     return (
-        <div>
+        <div className='container'>
+            <h1>Tạo bài báo</h1>
+            <TextField className='tf-taobaibao' label="Tên bài báo" variant="outlined" />
+            <TextField className='tf-taobaibao' label="Tiêu đề" variant="outlined" />
+            <TextField className='tf-taobaibao' label="Thumbnail" variant="outlined" />
             <JoditEditor
                 ref={editor}
-                value={content}
-                onBlur={newContent => setContent(newContent)}
+                value={addBaiBao.noiDung}
+                onChange={onNoiDungBaiBaoChange}
             />
-            {content}
+            {addBaiBao.noiDung}
             <button onClick={() => {denTrangBaiBao()}}>TaoBaiBao</button>
         </div>
     );
