@@ -1,0 +1,1 @@
+export const changeDataBaibao = 'Thay doi du lieu bai bao'
