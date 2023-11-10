@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import JoditEditor from 'jodit-react';
 import {  useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeDataBaibaoAction, changeNoiDungBaibaoAction } from '../action/BaiBaoAction';
+import { changeNoiDungBaibaoAction } from '../action/BaiBaoAction';
 import "../assets/css/TaoBaiBao.css";
 import { TextField } from '@mui/material';
 
@@ -29,7 +29,6 @@ function TaoBaiBao() {
     return (
         <div className='container'>
             <h1>Tạo bài báo</h1>
-            
             <TextField className='tf-taobaibao' label="Tên bài báo" variant="outlined" />
             <TextField className='tf-taobaibao' label="Tiêu đề" variant="outlined" />
             <TextField className='tf-taobaibao' label="Thumbnail" variant="outlined" />
