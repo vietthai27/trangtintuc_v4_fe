@@ -24,10 +24,12 @@ function TaoBaiBao() {
     const onNoiDungBaiBaoChange = (value) => {
         dispatch(changeNoiDungBaibaoAction(value));
     }
+    //change
 
     return (
         <div className='container'>
             <h1>Tạo bài báo</h1>
+            
             <TextField className='tf-taobaibao' label="Tên bài báo" variant="outlined" />
             <TextField className='tf-taobaibao' label="Tiêu đề" variant="outlined" />
             <TextField className='tf-taobaibao' label="Thumbnail" variant="outlined" />
