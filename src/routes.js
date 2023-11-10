@@ -1,5 +1,7 @@
+import LoginPage from "./pages/LoginPage"
 import BaiBao from "./component/BaiBao"
 import TaoBaiBao from "./component/TaoBaiBao"
+import SignUpPage from "./pages/SignUpPage"
 
 
 const routes = [
@@ -10,6 +12,14 @@ const routes = [
     {
         path: "/baibao",
         element: <BaiBao />
+    },
+    {
+        path: "/login",
+        element: <LoginPage />
+    },
+    {
+        path: "/signup",
+        element: <SignUpPage />
     }
 
 ]
