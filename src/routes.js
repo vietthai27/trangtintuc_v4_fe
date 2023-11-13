@@ -15,7 +15,7 @@ const routes = [
         element: <TaoBaiBaoPage />
     },
     {
-        path: "/baibao",
+        path: "/baibao/:id",
         element: <BaiBaoPage />
     },
     {

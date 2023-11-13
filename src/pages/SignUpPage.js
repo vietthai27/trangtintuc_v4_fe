@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { dangKyAction, thayDoiEmailAction, thayDoiMatKhauAction, thayDoiNhapLaiMatKhauAction, thayDoiTenNguoiDungAction } from '../action/UserAction';
 import { toast } from 'react-toastify';
 import validator from "validator";
+import { Link } from 'react-router-dom';
 
 function SignUpPage() {
 
@@ -35,7 +36,7 @@ function SignUpPage() {
     return (
         <div className='container'>
 
-            <Box sx={{ m: "30px auto", p: "10px", alignItems: "center", backgroundColor: "white", borderRadius: "15px", boxShadow: 10, display: "flex", flexDirection: "column", height: "50vh", justifyContent: "space-evenly",padding: "3rem" }}>
+            <Box sx={{ m: "30px auto", alignItems: "center", backgroundColor: "white", borderRadius: "15px", boxShadow: 10, display: "flex", flexDirection: "column", height: "50vh", justifyContent: "space-evenly",padding: "3rem" }}>
                 <h1>Đăng ký</h1>
                 <TextField
                     className='input'
@@ -66,6 +67,7 @@ function SignUpPage() {
                     onChange={(e) => { dispatch(thayDoiNhapLaiMatKhauAction(e.target.value)) }}
                 />
                 <Button className='button' variant="contained" onClick={() => { handelDangKy() }}>Đăng ký</Button>
+                Đã có tài khoản ? <Link to={"/login"}>Đăng nhập</Link>
             </Box>
         </div >
     );

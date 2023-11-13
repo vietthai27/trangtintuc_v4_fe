@@ -1,1 +1,1 @@
-export const host = "http://localhost:8080"
+export const host = /*"http://localhost:8080"*/ "https://a8d6-42-114-127-19.ngrok-free.app"
