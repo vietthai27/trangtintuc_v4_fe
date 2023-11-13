@@ -1,9 +1,17 @@
 import React from 'react';
+import '../assets/css/TrangChu.css'
+import BaiBaoMoiNhat from '../component/BaiBaoMoiNhat';
+import Heading from '../component/Heading';
 
 function TrangChu() {
+
+
     return (
-        <div>
-            <h1>Trang chủ</h1>
+        <div className='home'>
+            <Heading/>
+
+            {/* <BaiBaoMoiNhat/> */}
+            
         </div>
     );
 }

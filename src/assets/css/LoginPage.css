@@ -1,23 +1,17 @@
-.container {
-    background: rgb(35,170,201);
-    background: linear-gradient(25deg, rgba(35,170,201,1) 27%, rgba(251,51,247,1) 65%);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.login-container {
+    background: linear-gradient(117deg, rgba(120, 246, 216, 1) 37%, rgba(34, 177, 251, 1) 68%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
 }
 
 h1 {
     font-size: 40px;
     text-align: center;
-    margin: 20px;
 }
 
-.input {
-    display: block;
-    margin: 10px auto;
+.login-container .button {
+    margin: 30px auto 20px auto;
 }
-
-.button {
-    margin: 10px auto;
-}
-

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import parse from 'html-react-parser';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeNoiDungBaibaoAction, layBaibaoAction } from '../action/BaiBaoAction';
+import { layBaibaoAction } from '../action/BaiBaoAction';
 import { useParams } from 'react-router-dom';
 
 
