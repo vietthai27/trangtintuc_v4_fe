@@ -18,6 +18,8 @@ function BaiBaoPage() {
         //dispatch(changeNoiDungBaibaoAction(baiBao.noiDung.replace(/\\"/g, '"')))
     }, [dispatch])
 
+    console.log(baiBao.noiDung);
+
     return (
         <div style={{ width: '50%' }}>
             <h1>{baiBao.tenBaiBao}</h1>
