@@ -1,17 +1,22 @@
 import LoginPage from "./pages/LoginPage"
-import BaiBao from "./component/BaiBao"
-import TaoBaiBao from "./component/TaoBaiBao"
 import SignUpPage from "./pages/SignUpPage"
+import TaoBaiBaoPage from "./pages/TaoBaiBaoPage"
+import BaiBaoPage from "./pages/BaiBaoPage"
+import TrangChu from "./pages/TrangChu"
 
 
 const routes = [
     {
+        path: "/",
+        element: <TrangChu />
+    },
+    {
         path: "/taobaibao",
-        element: <TaoBaiBao />
+        element: <TaoBaiBaoPage />
     },
     {
         path: "/baibao",
-        element: <BaiBao />
+        element: <BaiBaoPage />
     },
     {
         path: "/login",
