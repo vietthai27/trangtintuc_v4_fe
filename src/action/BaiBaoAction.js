@@ -1,5 +1,5 @@
 import axios from "axios"
-import { LayBaiBaoThanhCong, TaoBaiBaoThanhCong, TaoBaiBaoThatBai, ThayDoiNoiDungBaiBaoTrongTaoBaiBao, ThayDoiTenBaiBaoTrongTaoBaiBao, ThayDoiThumbnailTrongTaoBaiBao, ThayDoiTieuDeBaiBaoTrongTaoBaiBao } from "../constant/BaiBaoConstant"
+import { LayBaiBaoMoiNhatThanhCong, LayBaiBaoMoiNhatThatBai, LayBaiBaoThanhCong, TaoBaiBaoThanhCong, TaoBaiBaoThatBai, ThayDoiNoiDungBaiBaoTrongTaoBaiBao, ThayDoiTenBaiBaoTrongTaoBaiBao, ThayDoiThumbnailTrongTaoBaiBao, ThayDoiTieuDeBaiBaoTrongTaoBaiBao } from "../constant/BaiBaoConstant"
 import { host } from "../assets/Util/Domain"
 
 export const changeNoiDungBaibaoAction = (inputValue) => {
@@ -53,6 +53,19 @@ export const layBaibaoAction = (id) => {
             return dispatch({ type: LayBaiBaoThanhCong, data: res.data })
         } catch (e) {
             return dispatch({ type: LayBaiBaoThanhCong, data: e })
+        }
+    }
+}
+
+export const layBaibaoMoiNhatAction = () => {
+    return async (dispatch) => {
+        try {
+            const res = await axios.get(host + "/baibao/get/findByOrderByNgayDangDesc"
+            , { headers: { "ngrok-skip-browser-warning": "69420"} }
+            )
+            return dispatch({ type: LayBaiBaoMoiNhatThanhCong, data: res.data })
+        } catch (e) {
+            return dispatch({ type: LayBaiBaoMoiNhatThatBai, data: e })
         }
     }
 }

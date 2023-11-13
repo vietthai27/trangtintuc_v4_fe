@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { LayBaiBaoThanhCong, LayBaiBaoThatBai, TaoBaiBaoThanhCong, TaoBaiBaoThatBai, ThayDoiNoiDungBaiBaoTrongTaoBaiBao, ThayDoiTenBaiBaoTrongTaoBaiBao, ThayDoiThumbnailTrongTaoBaiBao, ThayDoiTieuDeBaiBaoTrongTaoBaiBao } from "../constant/BaiBaoConstant"
+import { LayBaiBaoMoiNhatThanhCong, LayBaiBaoMoiNhatThatBai, LayBaiBaoThanhCong, LayBaiBaoThatBai, TaoBaiBaoThanhCong, TaoBaiBaoThatBai, ThayDoiNoiDungBaiBaoTrongTaoBaiBao, ThayDoiTenBaiBaoTrongTaoBaiBao, ThayDoiThumbnailTrongTaoBaiBao, ThayDoiTieuDeBaiBaoTrongTaoBaiBao } from "../constant/BaiBaoConstant"
 
 const initialState = {
     addBaiBao: {
@@ -15,7 +15,8 @@ const initialState = {
         noiDung: "",
         ngayDang: "",
         luotXem: 0
-    }
+    },
+    danhSachBaiBao:[]
 }
 
 const baiBaoReducer = (state = initialState, action) => {
@@ -43,6 +44,12 @@ const baiBaoReducer = (state = initialState, action) => {
             break
         case LayBaiBaoThatBai:
             state.baiBao = action.data
+            break
+        case LayBaiBaoMoiNhatThatBai:
+            state.danhSachBaiBao = action.data
+            break
+        case LayBaiBaoMoiNhatThanhCong:
+            state.danhSachBaiBao = action.data
             break
         default:
             break

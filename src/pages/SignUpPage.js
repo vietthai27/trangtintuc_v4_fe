@@ -6,6 +6,7 @@ import { dangKyAction, thayDoiEmailAction, thayDoiMatKhauAction, thayDoiNhapLaiM
 import { toast } from 'react-toastify';
 import validator from "validator";
 import { Link } from 'react-router-dom';
+import {  boxStyleSignUp } from '../assets/Util/StyleConfig';
 
 function SignUpPage() {
 
@@ -33,10 +34,12 @@ function SignUpPage() {
 
     }
 
-    return (
-        <div className='container'>
 
-            <Box sx={{ m: "30px auto", alignItems: "center", backgroundColor: "white", borderRadius: "15px", boxShadow: 10, display: "flex", flexDirection: "column", height: "50vh", justifyContent: "space-evenly",padding: "3rem" }}>
+
+    return (
+        <div className='login-container'>
+
+            <Box sx={boxStyleSignUp}>
                 <h1>Đăng ký</h1>
                 <TextField
                     className='input'

@@ -32,7 +32,7 @@ export const dangNhapAction = (userData) => {
             const res = await axios.post(host + "/login", userData)
             return dispatch({ type: DangNhapThanhCong, data: res.data })
         } catch (e) {
-            return dispatch({ type: DangNhapThatBai, data: e })
+            return dispatch({ type: DangNhapThatBai, data: e.response.data.message })
         }
     }
 }
@@ -43,6 +43,7 @@ export const dangKyAction = (userData) => {
             await axios.post(host + "/userSignup", userData)
             return dispatch({ type: DangKyThanhCong })
         } catch (e) {
+            
             return dispatch({ type: DangKyThatBai, data: e })
         }
     }

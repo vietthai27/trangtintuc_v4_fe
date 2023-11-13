@@ -1,15 +1,18 @@
-.container {
-    background: rgb(35,170,201);
+.login-container {
     background: linear-gradient(25deg, rgba(35,170,201,1) 27%, rgba(251,51,247,1) 65%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 h1 {
     font-size: 40px;
     text-align: center;
-    margin: 20px;
 }
 
 .input {
@@ -19,5 +22,6 @@ h1 {
 
 .button {
     margin: 10px auto;
+    width: 50%;
 }
 

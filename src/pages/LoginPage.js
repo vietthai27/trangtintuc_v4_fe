@@ -4,6 +4,7 @@ import '../assets/css/LoginPage.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { dangNhapAction, thayDoiMatKhauAction, thayDoiTenNguoiDungAction } from '../action/UserAction';
 import { Link } from 'react-router-dom';
+import { boxStyleLogin } from '../assets/Util/StyleConfig';
 
 
 function LoginPage() {
@@ -16,23 +17,12 @@ function LoginPage() {
         dispatch(dangNhapAction(userData))
     }
 
-    const boxStyle = {
-        m: "30px auto", 
-        alignItems: "center", 
-        backgroundColor: "white", 
-        borderRadius: "15px", 
-        boxShadow: 10, 
-        display: "flex", 
-        flexDirection: "column", 
-        height: "50vh", 
-        justifyContent: "space-evenly", 
-        padding: "3rem"
-    }
+
 
     return (
-        <div className='container'>
+        <div className='login-container'>
 
-            <Box sx={boxStyle}>
+            <Box sx={boxStyleLogin}>
                 <h1>Đăng nhập</h1>
                 <TextField
                     className='input'
