@@ -35,6 +35,7 @@ const userReducer = (state = initialState, action) => {
             toast.success("Tạo tài khoản thành công")
             break
         case DangKyThatBai:
+            console.log(action.data);
             toast.error(action.data)
             break
         default:

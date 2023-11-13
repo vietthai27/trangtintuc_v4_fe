@@ -4,25 +4,3 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.App .body {
-    display: flex;
-    height: 80vh;
-    justify-content: space-between;
-}
-
-.head,
-.foot {
-    height: 10vh;
-}
-
-.head,
-.foot,
-.left,
-.right {
-    border: 2px solid black;
-}
-
-.left,
-.right {
-    width: 15%;
-}
