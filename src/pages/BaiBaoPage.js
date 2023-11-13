@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import parse from 'html-react-parser';
 import { useDispatch, useSelector } from 'react-redux';
-import { layBaibaoAction } from '../action/BaiBaoAction';
+import { changeNoiDungBaibaoAction, layBaibaoAction } from '../action/BaiBaoAction';
 
 
 function BaiBaoPage() {
@@ -11,11 +11,9 @@ function BaiBaoPage() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(layBaibaoAction(14))
+        dispatch(layBaibaoAction(15))
+        //dispatch(changeNoiDungBaibaoAction(baiBao.noiDung.replace(/\\"/g, '"')))
     }, [dispatch])
-
-    console.log(baiBao);
-
 
     return (
         <div style={{ width: '50%' }}>
@@ -23,7 +21,7 @@ function BaiBaoPage() {
             <p>{baiBao.ngayDang}</p>
             <p>{baiBao.luoiXem}</p>
             <p>{baiBao.tieuDe}</p>
-            <div>{parse(baiBao.noiDung)}</div>
+            <div>{parse(baiBao.noiDung.replace(/\\"/g, '"'))}</div>
         </div>
     );
 }
