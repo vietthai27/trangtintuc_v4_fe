@@ -47,7 +47,9 @@ export const taoBaibaoAction = (addBaiBao) => {
 export const layBaibaoAction = (id) => {
     return async (dispatch) => {
         try {
-            const res = await axios.get(host + "/baibao/get/getBaiBaoById/" + id)
+            const res = await axios.get(host + "/baibao/get/getBaiBaoById/" + id
+            , { headers: { "ngrok-skip-browser-warning": "69420"} }
+            )
             return dispatch({ type: LayBaiBaoThanhCong, data: res.data })
         } catch (e) {
             return dispatch({ type: LayBaiBaoThanhCong, data: e })

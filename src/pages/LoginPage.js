@@ -18,7 +18,6 @@ function LoginPage() {
 
     const boxStyle = {
         m: "30px auto", 
-        p: "10px", 
         alignItems: "center", 
         backgroundColor: "white", 
         borderRadius: "15px", 
