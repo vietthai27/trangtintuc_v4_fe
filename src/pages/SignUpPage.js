@@ -35,8 +35,8 @@ function SignUpPage() {
     return (
         <div className='container'>
 
-            <Box sx={{ m: "30px auto", p: "10px", alignItems: "center", backgroundColor: "white", borderRadius: "15px", boxShadow: 10 }}>
-                <h1>Đăng nhập</h1>
+            <Box sx={{ m: "30px auto", p: "10px", alignItems: "center", backgroundColor: "white", borderRadius: "15px", boxShadow: 10, display: "flex", flexDirection: "column", height: "50vh", justifyContent: "space-evenly",padding: "3rem" }}>
+                <h1>Đăng ký</h1>
                 <TextField
                     className='input'
                     label="Tên người dùng"

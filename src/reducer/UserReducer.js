@@ -33,8 +33,10 @@ const userReducer = (state = initialState, action) => {
             break
         case DangKyThanhCong:
             toast.success("Tạo tài khoản thành công")
+            break
         case DangKyThatBai:
             toast.error(action.data)
+            break
         default:
             break
     }
