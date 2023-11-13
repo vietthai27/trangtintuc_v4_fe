@@ -19,10 +19,10 @@ function BaiBaoMoiNhat() {
             {danhSachBaiBao.map((item) => (
                 <Link className='items' to={`/baibao/${item.id}`} key={item.id}>
                     <div className='thumbnail'>
-                        <img src={item.thumbnail}/>
+                        <img src={item.thumbnail} />
                     </div>
                     <div className='info'>
-                        <p>Ngày đăng:{item.ngayDang.substring(0,10)}</p>
+                        <p>Ngày đăng:{item.ngayDang.substring(0, 10)}</p>
                         <b>{item.tenBaiBao}</b>
                         <i>{item.tieuDe}</i>
                     </div>
