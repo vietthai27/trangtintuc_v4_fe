@@ -6,7 +6,7 @@ import { dangKyAction, thayDoiEmailAction, thayDoiMatKhauAction, thayDoiNhapLaiM
 import { toast } from 'react-toastify';
 import validator from "validator";
 import { Link } from 'react-router-dom';
-import {  boxStyleSignUp } from '../assets/Util/StyleConfig';
+import { boxStyleLogin } from '../assets/Util/StyleConfig';
 
 function SignUpPage() {
 
@@ -34,44 +34,43 @@ function SignUpPage() {
 
     }
 
-
-
     return (
         <div className='login-container'>
-
-            <Box sx={boxStyleSignUp}>
-                <h1>Đăng ký</h1>
-                <TextField
-                    className='input'
-                    label="Tên người dùng"
-                    type="text"
-                    variant="standard"
-                    onChange={(e) => { dispatch(thayDoiTenNguoiDungAction(e.target.value)) }}
-                />
-                <TextField
-                    className='input'
-                    label="Email"
-                    type="text"
-                    variant="standard"
-                    onChange={(e) => { dispatch(thayDoiEmailAction(e.target.value)) }}
-                />
-                <TextField
-                    className='input'
-                    label="Mật khẩu"
-                    type="password"
-                    variant="standard"
-                    onChange={(e) => { dispatch(thayDoiMatKhauAction(e.target.value)) }}
-                />
-                <TextField
-                    className='input'
-                    label="Nhập lại mật khẩu"
-                    type="password"
-                    variant="standard"
-                    onChange={(e) => { dispatch(thayDoiNhapLaiMatKhauAction(e.target.value)) }}
-                />
-                <Button className='button' variant="contained" onClick={() => { handelDangKy() }}>Đăng ký</Button>
-                Đã có tài khoản ? <Link to={"/login"}>Đăng nhập</Link>
-            </Box>
+            <div>
+                <Box sx={boxStyleLogin}>
+                    <h1>Đăng ký</h1>
+                    <TextField
+                        className='input'
+                        label="Tên người dùng"
+                        type="text"
+                        variant="standard"
+                        onChange={(e) => { dispatch(thayDoiTenNguoiDungAction(e.target.value)) }}
+                    />
+                    <TextField
+                        className='input'
+                        label="Email"
+                        type="text"
+                        variant="standard"
+                        onChange={(e) => { dispatch(thayDoiEmailAction(e.target.value)) }}
+                    />
+                    <TextField
+                        className='input'
+                        label="Mật khẩu"
+                        type="password"
+                        variant="standard"
+                        onChange={(e) => { dispatch(thayDoiMatKhauAction(e.target.value)) }}
+                    />
+                    <TextField
+                        className='input'
+                        label="Nhập lại mật khẩu"
+                        type="password"
+                        variant="standard"
+                        onChange={(e) => { dispatch(thayDoiNhapLaiMatKhauAction(e.target.value)) }}
+                    />
+                    <Button className='button' variant="contained" onClick={() => { handelDangKy() }}>Đăng ký</Button>
+                    Đã có tài khoản ? <Link to={"/login"}>Đăng nhập</Link>
+                </Box>
+            </div>
         </div >
     );
 }

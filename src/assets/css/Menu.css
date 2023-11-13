@@ -1,0 +1,59 @@
+.menu {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  
+  .menu_list {
+    justify-content: flex-start;
+    display: flex;
+  }
+  
+  .menu .parent {
+    padding: 5px 10px;
+    margin: 15px 10px;
+    width: 90px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .menu .parent_box:hover {
+    color: aquamarine;
+    text-shadow: 3px 3px 9px aquamarine;
+    transition: all 0.5s;
+  }
+  
+  .menu .parent_box:hover > .child_box {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    background-color: white;
+    margin: 0px 0px;
+    width: 180px;
+    border-bottom: 5px solid aqua;
+    box-shadow: 5px 5px 11px 1px #888888;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+  
+  .menu .child_box {
+    display: none;
+  }
+  
+  .menu .child_contain:hover {
+    background-color: aqua;
+    transition: all 0.5s;
+  }
+  
+  .menu .child {
+    text-shadow: none;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid;
+    cursor: pointer;
+  }
+  
+  .menu_button {
+    display: none;
+  }

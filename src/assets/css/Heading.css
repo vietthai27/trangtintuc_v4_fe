@@ -1,0 +1,11 @@
+.logo {
+    width: 180px;
+    padding: 0 2rem;
+    height: 60px;
+}
+
+.head {
+    display: flex;
+    border-bottom:2px solid aquamarine;
+}
+
