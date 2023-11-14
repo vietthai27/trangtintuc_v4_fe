@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 import { useDispatch, useSelector } from 'react-redux';
 import { layBaibaoAction } from '../action/BaiBaoAction';
 import { useParams } from 'react-router-dom';
+import '../assets/css/BaiBao.css'
 
 
 function BaiBaoPage() {
@@ -15,18 +16,17 @@ function BaiBaoPage() {
 
     useEffect(() => {
         dispatch(layBaibaoAction(id))
-        //dispatch(changeNoiDungBaibaoAction(baiBao.noiDung.replace(/\\"/g, '"')))
     }, [dispatch])
 
-    console.log(baiBao.noiDung);
-
     return (
-        <div style={{ width: '50%' }}>
+        <div className='baibao-container'>
             <h1>{baiBao.tenBaiBao}</h1>
-            <p>{baiBao.ngayDang}</p>
-            <p>{baiBao.luotXem}</p>
-            <p>{baiBao.tieuDe}</p>
-            <div>{parse(baiBao.noiDung.replace(/\\"/g, '"'))}</div>
+            <div className='baibao-info'>
+                <p>Ngày đăng: {baiBao.ngayDang.substring(0, 10)}</p>
+                <p>Lượt xem:{baiBao.luotXem}</p>
+            </div>
+            <i>{baiBao.tieuDe}</i>
+            <div className='baibao-noidung'>{parse(baiBao.noiDung.replace(/\\"/g, '"'))}</div>
         </div>
     );
 }

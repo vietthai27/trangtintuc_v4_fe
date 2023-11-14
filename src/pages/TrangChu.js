@@ -9,9 +9,7 @@ function TrangChu() {
     return (
         <div className='home'>
             <Heading/>
-
-            {/* <BaiBaoMoiNhat/> */}
-            
+            <BaiBaoMoiNhat/>          
         </div>
     );
 }

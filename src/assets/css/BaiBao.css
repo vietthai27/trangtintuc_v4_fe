@@ -1,0 +1,21 @@
+.baibao-container {
+    width: 50%;
+    margin: 2rem auto 0 auto;
+}
+
+.baibao-info {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.baibao-container i{
+    font-size: 20px;
+    color: gray;
+    margin: 20px;
+}
+
+.baibao-noidung {
+    margin: 40px 0 0 0 ;
+}

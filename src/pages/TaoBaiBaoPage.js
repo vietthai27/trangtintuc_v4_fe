@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import JoditEditor from 'jodit-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeNoiDungBaibaoAction, changeTenBaibaoAction, changeThumbnailBaibaoAction, changeTieuDeBaibaoAction, taoBaibaoAction, } from '../action/BaiBaoAction';
@@ -10,6 +10,15 @@ function TaoBaiBaoPage() {
     const dispatch = useDispatch()
 
     const editor = useRef(null);
+
+    const config = useMemo(
+        () => ({
+            readonly: false,
+            width: '1000px',
+            height: '400px'
+        }),
+        []
+    );
 
     const { addBaiBao } = useSelector((reduxData) => reduxData.baiBaoReducer)
 
@@ -24,21 +33,19 @@ function TaoBaiBaoPage() {
     }
 
     return (
-        <div className='container'>
-            
-                <h1>Tạo bài báo</h1>
-                <TextField onChange={(e) => { dispatch(changeTenBaibaoAction(e.target.value)) }} className='tf-taobaibao' label="Tên bài báo" variant="outlined" />
-                <TextField onChange={(e) => { dispatch(changeTieuDeBaibaoAction(e.target.value)) }} className='tf-taobaibao' label="Tiêu đề" variant="outlined" />
-                <TextField onChange={(e) => { dispatch(changeThumbnailBaibaoAction(e.target.value)) }} className='tf-taobaibao' label="Thumbnail" variant="outlined" />
-                <JoditEditor
-                    ref={editor}
-                    value={addBaiBao.noiDung}
-                    onChange={onNoiDungBaiBaoChange}
-                />
-                <Button variant="contained" onClick={() => { handelTaoBaoBao() }}>Tạo bài báo</Button>
-            </div>
-
-
+        <div className='taobaobao-container'>
+            <h1>Tạo bài báo</h1>
+            <TextField onChange={(e) => { dispatch(changeTenBaibaoAction(e.target.value)) }} className='tf-taobaibao' label="Tên bài báo" variant="outlined" />
+            <TextField onChange={(e) => { dispatch(changeTieuDeBaibaoAction(e.target.value)) }} className='tf-taobaibao' label="Tiêu đề" variant="outlined" />
+            <TextField onChange={(e) => { dispatch(changeThumbnailBaibaoAction(e.target.value)) }} className='tf-taobaibao' label="Thumbnail" variant="outlined" />
+            <JoditEditor
+                config={config}
+                ref={editor}
+                value={addBaiBao.noiDung}
+                onChange={onNoiDungBaiBaoChange}
+            />
+            <Button variant="contained" onClick={() => { handelTaoBaoBao() }}>Tạo bài báo</Button>
+        </div>
     );
 }
 

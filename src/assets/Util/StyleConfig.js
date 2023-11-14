@@ -10,3 +10,4 @@ export const boxStyleLogin = {
     padding: "1rem 3rem",
     borderRadius: "15px"
 }
+
